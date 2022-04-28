@@ -1,0 +1,16 @@
+def check_palindrome(word):
+    if word.lower() == word.lower()[::-1]:
+        return True
+
+
+def get_palindromes(text):
+    list_of_words = text.split()
+    palindromes = []
+    for word in list_of_words:
+        if check_palindrome(word):
+            palindromes.append(word)
+    return palindromes
+
+
+if __name__ == '__main__':
+    print(get_palindromes('bob Hello world lol yuy'))
